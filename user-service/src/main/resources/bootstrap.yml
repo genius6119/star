@@ -1,0 +1,30 @@
+server:
+  port: 8890
+
+spring:
+  application:
+    name: user-service
+
+  datasource:
+        url: jdbc:mysql://118.31.8.105/star
+        username: root
+        password: qazwsafweqw21312321zc~~~sx123456!!!!AAA
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    registry-fetch-interval-seconds: 5
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+management:
+  security:
+    enabled: false
+
+redis:
+  host: 47.93.236.80
+  port: 6379
+  max-idle: 5
+  max-total: 10
+  max-wait-millis: 3000

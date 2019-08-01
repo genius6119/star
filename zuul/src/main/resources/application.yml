@@ -1,0 +1,43 @@
+server:
+  port: 9500
+
+spring:
+  application:
+    name: api-gateway
+  datasource:
+    url: jdbc:mysql://118.31.8.105/star
+    username: root
+    password: qazwsafweqw21312321zc~~~sx123456!!!!AAA
+  http:
+    multipart:
+    enabled: true   # 启用http上传处理
+    max-file-size: 10MB # 设置单个文件的最大长度
+    max-request-size: 10MB # 设置最大的请求文件的大小
+
+
+zuul:
+  routes:
+    news-service:
+          path: /news-service/**
+          serviceId: news-service
+    common-service:
+          path: /common-service/**
+          serviceId: common-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+redis:
+  host: 47.93.236.80
+  port: 6379
+  max-idle: 5
+  max-total: 10
+  max-wait-millis: 3000

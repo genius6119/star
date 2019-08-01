@@ -1,0 +1,36 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: common-service
+  http:
+      multipart:
+        enabled: true   # 启用http上传处理
+        max-file-size: 10MB # 设置单个文件的最大长度
+        max-request-size: 10MB # 设置最大的请求文件的大小
+  cloud:
+    config:
+      profile: test
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+
+management:
+  security:
+    enabled: false
+
+redis:
+  host: 47.93.236.80
+  port: 6379
+  max-idle: 5
+  max-total: 10
+  max-wait-millis: 3000
+
+

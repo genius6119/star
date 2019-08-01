@@ -1,0 +1,29 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: news-service
+  cloud:
+    config:
+      profile: test
+      discovery:
+        enabled: true
+        service-id: config-server
+  datasource:
+      url: jdbc:mysql://118.31.8.105:3306/star?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: qazwsafweqw21312321zc~~~sx123456!!!!AAA
+      jackson:
+            date-format: yyyy-MM-dd HH:mm:ss
+            time-zone: GMT+8
+management:
+  security:
+    enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
