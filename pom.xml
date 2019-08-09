@@ -19,9 +19,9 @@
     <modules>
         <module>eureka</module>
         <module>zuul</module>
-        <module>user-service</module>
-        <module>news-service</module>
-        <module>common-service</module>
+        <module>user</module>
+        <module>news</module>
+        <module>common</module>
     </modules>
 
     <properties>
