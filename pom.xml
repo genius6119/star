@@ -41,7 +41,7 @@
         <commons.codec.version>1.10</commons.codec.version>
 
         <fastjson.version>1.2.12</fastjson.version>
-        <logback.version>1.1.6</logback.version>
+        <logback.version>1.2.0</logback.version>
         <logback.access.version>1.1.2</logback.access.version>
         <jedis.version>2.9.0</jedis.version>
         <lombok.version>1.16.6</lombok.version>
