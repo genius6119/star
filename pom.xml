@@ -40,7 +40,7 @@
         <commons.logging.version>1.2</commons.logging.version>
         <commons.codec.version>1.10</commons.codec.version>
 
-        <fastjson.version>1.2.12</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <logback.version>1.1.6</logback.version>
         <logback.access.version>1.1.2</logback.access.version>
         <jedis.version>2.9.0</jedis.version>
